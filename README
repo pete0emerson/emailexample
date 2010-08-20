@@ -1,0 +1,18 @@
+
+
+I was thinking about this post: http://news.ycombinator.com/item?id=1568298
+
+I don't like the Google branding, either.
+
+I figured out how to do it from this post:
+
+http://ididitmyway.heroku.com/past/2010/3/30/superdo_a_sinatra_and_datamapper_to_do_list/
+
+One thing of note, you should change this in main.rb:
+
+get '/all' do
+ @emails = Email.all
+ erb :show
+end
+
+It's obviously unsecure. If you're not too worried, you could simply obfuscate it and make it a really hard to guess URL ... or get fancy and put some authentication around it.
