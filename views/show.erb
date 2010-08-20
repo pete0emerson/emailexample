@@ -1,0 +1,7 @@
+<% unless @emails.empty? %>
+<% @emails.each do |email| %>
+<%= email.name %><br/>
+<% end %>
+<% else %>
+No emails!
+<% end %>
